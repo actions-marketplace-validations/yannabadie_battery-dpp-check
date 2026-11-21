@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/battery-pass/v1"
+  ],
+  "@type": "BatteryPassport",
+  "id": "https://id.example-batteries.eu/01/03760123456784/21/EV-2026-000142",
+  "batteryCategory": "EV",
+  "batteryModel": "VoltPack-75-NMC811",
+  "gs1DigitalLink": "https://id.example-batteries.eu/01/03760123456784/21/EV-2026-000142",
+  "manufacturer": {
+    "name": "VoltPack Europe SAS",
+    "address": "14 Avenue de la Technologie, 69007 Lyon, France",
+    "eori": "FR55210055400013",
+    "vatNumber": "FR40552100554",
+    "siren": "552100554"
+  },
+  "manufacturing": {
+    "date": "2026-10-15",
+    "place": "Lyon",
+    "country": "FR"
+  },
+  "carbonFootprint": {
+    "totalKgCo2ePerKwh": 61.4,
+    "performanceClass": "B",
+    "lifecycleBreakdown": {
+      "rawMaterial": 34.2,
+      "production": 19.8,
+      "distribution": 2.1,
+      "endOfLife": 5.3
+    }
+  },
+  "recycledContent": {
+    "cobaltPct": 16.5,
+    "lithiumPct": 6.2,
+    "nickelPct": 8.4,
+    "leadPct": 85.0
+  },
+  "performanceAndDurability": {
+    "ratedCapacityAh": 208.0,
+    "ratedEnergyKwh": 75.0,
+    "nominalVoltageV": 360.0,
+    "minVoltageV": 295.0,
+    "maxVoltageV": 405.0,
+    "stateOfHealthPct": 100.0,
+    "expectedCycleLife": 1800,
+    "roundTripEfficiencyPct": 93.5
+  },
+  "compliance": {
+    "ceConformity": true,
+    "euDeclarationOfConformityUrl": "https://id.example-batteries.eu/docs/eu-doc-voltpack-75.pdf",
+    "dueDiligenceReportUrl": "https://id.example-batteries.eu/docs/due-diligence-2026.pdf",
+    "separateCollectionSymbol": true,
+    "extinguishingAgent": "Water mist / Class D dry chemical"
+  },
+  "accessTiers": {
+    "public": [
+      "batteryCategory",
+      "manufacturer",
+      "manufacturing",
+      "carbonFootprint",
+      "recycledContent",
+      "compliance"
+    ],
+    "legitimateInterest": [
+      "performanceAndDurability",
+      "disassemblyManualUrl",
+      "cellChemistryDetail"
+    ],
+    "notifiedBodiesAndAuthorities": [
+      "dueDiligenceAuditTrail",
+      "testReportsAnnexVIII"
+    ]
+  }
+}

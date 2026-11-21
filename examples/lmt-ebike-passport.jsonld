@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/battery-pass/v1"
+  ],
+  "@type": "BatteryPassport",
+  "id": "https://id.example-mobility.eu/01/03760123456784/21/LMT-EBIKE-00981",
+  "batteryCategory": "LMT",
+  "batteryModel": "CityBike-625Wh-LFP",
+  "gs1DigitalLink": "https://id.example-mobility.eu/01/03760123456784/21/LMT-EBIKE-00981",
+  "manufacturer": {
+    "name": "Example Mobility Europe SAS",
+    "address": "8 Rue des Ateliers, 44000 Nantes, France",
+    "eori": "FR55210055400021",
+    "vatNumber": "FR40552100554"
+  },
+  "manufacturing": {
+    "date": "2026-11-02",
+    "place": "Nantes",
+    "country": "FR"
+  },
+  "carbonFootprint": {
+    "totalKgCo2ePerKwh": 52.8,
+    "performanceClass": "A",
+    "lifecycleBreakdown": {
+      "rawMaterial": 28.0,
+      "production": 17.5,
+      "distribution": 2.3,
+      "endOfLife": 5.0
+    }
+  },
+  "recycledContent": {
+    "cobaltPct": 16.0,
+    "lithiumPct": 6.5,
+    "nickelPct": 7.0,
+    "leadPct": 85.0
+  },
+  "performanceAndDurability": {
+    "ratedCapacityAh": 17.4,
+    "ratedEnergyKwh": 0.625,
+    "nominalVoltageV": 36.0,
+    "stateOfHealthPct": 100.0,
+    "expectedCycleLife": 1200,
+    "roundTripEfficiencyPct": 91.0
+  },
+  "compliance": {
+    "ceConformity": true,
+    "euDeclarationOfConformityUrl": "https://id.example-mobility.eu/docs/doc-citybike-625.pdf",
+    "dueDiligenceReportUrl": "https://id.example-mobility.eu/docs/due-diligence-2026.pdf",
+    "separateCollectionSymbol": true
+  },
+  "accessTiers": {
+    "public": ["batteryCategory", "manufacturer", "carbonFootprint", "recycledContent"],
+    "legitimateInterest": ["performanceAndDurability", "repairGuideUrl"],
+    "notifiedBodiesAndAuthorities": ["conformityAssessmentReport"]
+  }
+}

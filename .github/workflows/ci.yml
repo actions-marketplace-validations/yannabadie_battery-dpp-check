@@ -1,0 +1,43 @@
+name: CI — Tests & Self-Validation (BatteryDPP-Check)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-dogfood:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Run unit tests
+        run: node --test tests/validate.test.mjs
+
+      - name: Dogfood BatteryDPP-Check Action on examples/
+        id: dpp
+        uses: ./
+        with:
+          target: "examples"
+          report-output: "dpp-report.json"
+          fail-on-error: "true"
+
+      - name: Verify generated DPP compliance report
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const r = JSON.parse(fs.readFileSync("dpp-report.json", "utf8"));
+            if (r.summary.filesValidated < 2 || r.summary.status !== "COMPLIANT") process.exit(1);
+            console.log("Verified BatteryDPP-Check report:", r.summary);
+          '
+          echo "Outputs: status=${{ steps.dpp.outputs.status }}, score=${{ steps.dpp.outputs.average-score }}, pass=${{ steps.dpp.outputs.pass-count }}"

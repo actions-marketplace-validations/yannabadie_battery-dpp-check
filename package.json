@@ -1,0 +1,37 @@
+{
+  "name": "battery-dpp-check",
+  "version": "1.0.0",
+  "description": "Zero-dependency EU Battery Passport (Regulation (EU) 2023/1542 Annex XIII) JSON-LD & GS1 Digital Link QR validator.",
+  "type": "module",
+  "main": "src/validate.mjs",
+  "bin": {
+    "battery-dpp-check": "./src/validate.mjs"
+  },
+  "scripts": {
+    "test": "node --test tests/validate.test.mjs",
+    "validate": "node src/validate.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "eu-battery-passport",
+    "battery-passport",
+    "dpp",
+    "digital-product-passport",
+    "espr",
+    "2023-1542",
+    "gs1-digital-link",
+    "json-ld",
+    "github-action",
+    "regtech"
+  ],
+  "author": "Yann Abadie",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yannabadie/battery-dpp-check.git"
+  },
+  "homepage": "https://yannabadie.github.io/battery-dpp-check/",
+  "dependencies": {}
+}

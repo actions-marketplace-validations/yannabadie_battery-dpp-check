@@ -1,0 +1,43 @@
+name: "BatteryDPP-Check — EU Battery Passport (2023/1542) Validator"
+author: "Yann Abadie"
+description: "Validate EU Battery Passport JSON-LD (Reg. 2023/1542 Annex XIII) & GS1 Digital Link QR URIs in CI — zero deps."
+
+branding:
+  icon: "battery-charging"
+  color: "yellow"
+
+inputs:
+  target:
+    description: "JSON / JSON-LD battery passport file or directory to validate (default: 'examples')."
+    required: false
+    default: "examples"
+  report-output:
+    description: "Output path for structured JSON compliance report."
+    required: false
+    default: "dpp-report.json"
+  fail-on-error:
+    description: "Fail workflow (exit 1) when any battery passport fails mandatory Annex XIII checks (true/false)."
+    required: false
+    default: "true"
+  max-depth:
+    description: "Maximum directory traversal depth for discovering .json/.jsonld passports."
+    required: false
+    default: "4"
+
+outputs:
+  report-path:
+    description: "Resolved path to the generated JSON compliance report."
+  files-validated:
+    description: "Number of battery passport files validated."
+  pass-count:
+    description: "Number of fully compliant battery passports."
+  fail-count:
+    description: "Number of non-compliant or partial battery passports."
+  average-score:
+    description: "Average EU Battery Passport Annex XIII compliance score (0-100)."
+  status:
+    description: "Overall compliance status (COMPLIANT / PARTIAL / NON_COMPLIANT)."
+
+runs:
+  using: "node20"
+  main: "src/validate.mjs"
