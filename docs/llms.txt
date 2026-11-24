@@ -1,0 +1,18 @@
+# BatteryDPP-Check — EU Battery Passport (Reg. (EU) 2023/1542) Validator
+
+> Zero-dependency GitHub Action, Node.js 20/22+ CLI, and 100 % client-side EU Battery Passport JSON-LD Validator & GS1 Digital Link QR Builder for EU Batteries Regulation (EU) 2023/1542 Art. 77 & Annex XIII (mandatory 18 February 2027 for EV, LMT, and industrial > 2 kWh batteries).
+
+## Free Tools & GitHub Marketplace
+
+- [Browser-Side EU Battery Passport JSON-LD Validator & GS1 QR Builder](https://yannabadie.github.io/battery-dpp-check/): Runs 10 automated Annex XIII & GS1 Mod-10 checks completely client-side with zero upload.
+- [GitHub Marketplace Action (`yannabadie/battery-dpp-check@v1.0.0`)](https://github.com/marketplace/actions/batterydpp-check-eu-battery-passport-2023-1542-validator): CI validation for OEMs, EV/LMT manufacturers, and importers.
+- [XML Sitemap](https://yannabadie.github.io/battery-dpp-check/sitemap.xml)
+
+## Companion EU RegTech & Compliance Packs
+
+- [EU AI Act Art. 50, CRA & EAA / RGAA v5 — Practical Compliance Guide (PDF 43 p., 24 EUR)](https://yannabadi.gumroad.com/l/eu-compliance-2026-2027-guide)
+- [EU Digital Compliance Command Center 2026–2027 (Notion System, 29 EUR)](https://yannabadi.gumroad.com/l/eu-compliance-2026-2027-notion-pack)
+- [CRA-SBOM-Guard (EU CRA Art. 14)](https://yannabadie.github.io/cra-sbom-guard/)
+- [AccessiKit (EU EAA / RGAA v5)](https://yannabadie.github.io/accessikit-eaa-rgaa/)
+- [AIActKit 2026 (EU AI Act Art. 50)](https://yannabadie.github.io/ai-act-art50-guard/)
+- [FacturKit 2027 (French Factur-X 1.09.2 / EN 16931)](https://yannabadie.github.io/facturkit-2027/)
